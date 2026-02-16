@@ -1,0 +1,262 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+          appearance: textfield;
+}
+
+body {
+  background: linear-gradient(180deg, #14131b 0%, #08070b 100%);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: "JetBrains Mono", monospace;
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.25;
+  font-weight: 700;
+}
+@media (min-width: 48em) {
+  body {
+    font-size: 1.125rem;
+    line-height: 1.3;
+  }
+}
+
+main {
+  max-width: 33.75rem;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.generator {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+@media (min-width: 48em) {
+  .generator {
+    gap: 2rem;
+  }
+}
+
+.title {
+  color: #817d92;
+  text-align: center;
+}
+@media (min-width: 48em) {
+  .title {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+}
+
+.password-display {
+  background: #24232c;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (min-width: 48em) {
+  .password-display {
+    padding: 1rem 2rem;
+  }
+}
+
+.password-display__text {
+  color: #54535b;
+  font-size: 1.5rem;
+  line-height: 1.3;
+}
+@media (min-width: 48em) {
+  .password-display__text {
+    font-size: 2rem;
+  }
+}
+
+.password-display__icon {
+  width: 1.3125rem;
+  height: 1.5rem;
+  color: #a4ffaf;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+.password-display__icon:hover {
+  color: #fff;
+}
+
+.generator__body {
+  background: #24232c;
+  padding: 1rem;
+  color: #e6e5ea;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+@media (min-width: 48em) {
+  .generator__body {
+    padding: 1.5rem 2rem;
+    margin-top: -0.5rem;
+  }
+}
+
+.length__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.length__display {
+  color: #a4ffaf;
+  font-size: 1.5rem;
+  line-height: 1.3;
+}
+
+.generator-slider {
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  margin-top: 0.5rem;
+  width: 100%;
+  height: 0.5rem;
+  background: #14131b;
+  cursor: pointer;
+}
+.generator-slider:hover::-webkit-slider-thumb {
+  border-color: #a4ffaf;
+  background: #18171f;
+}
+.generator-slider::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: #fff;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.generator-slider::-moz-range-thumb {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  background: #e6e5ea;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.generator__checkbox {
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  border: 2px solid #fff;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 1rem;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+}
+.generator__checkbox:hover {
+  border-color: #a4ffaf;
+}
+.generator__checkbox:checked {
+  border-color: #a4ffaf;
+  background: #a4ffaf;
+}
+.generator__checkbox::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: url(../images/icon-check.svg);
+  display: none;
+}
+.generator__checkbox:checked::after {
+  display: block;
+}
+@media (min-width: 48em) {
+  .generator__checkbox {
+    margin-right: 1.5rem;
+  }
+}
+
+.strength {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.875rem;
+  background: #18171f;
+}
+@media (min-width: 48em) {
+  .strength {
+    padding: 1.5rem 2rem;
+  }
+}
+
+.strength__title {
+  color: #817d92;
+}
+
+.strength__wrapper {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.strength__text {
+  display: none;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+.strength__bars {
+  max-width: 4rem;
+  width: 100%;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.strength__bar {
+  border: 2px solid #e6e5ea;
+  width: 0.625rem;
+  height: 1.75rem;
+}
+
+.button {
+  background: #a4ffaf;
+  line-height: 1.3;
+  padding: 1rem 0;
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  margin-top: -1rem;
+  border: 2px solid #a4ffaf;
+  transition: all 0.2s ease;
+}
+.button:hover {
+  background: #18171f;
+  color: #a4ffaf;
+}
+@media (min-width: 48em) {
+  .button {
+    padding: 1.5rem 0;
+  }
+}
+
+.arrow-icon {
+  width: 0.75rem;
+  height: 0.75rem;
+}
