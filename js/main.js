@@ -24,7 +24,7 @@ const generateBtn = document.querySelector(".button");
 const passwordDisplay = document.querySelector(".password-display__text");
 const checkboxes = document.querySelectorAll(".generator__checkbox");
 
-generateBtn.addEventListener("click", (e) => {
+generateBtn.addEventListener("click", () => {
   let availableChars = "";
   let generatedPassword = "";
   let checkedCount = 0;
