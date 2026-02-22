@@ -28,7 +28,7 @@ generateBtn.addEventListener("click", () => {
   let availableChars = "";
   let generatedPassword = "";
   let checkedCount = 0;
-  const length = parseInt(slider.value);
+  const length = +slider.value;
 
   checkboxes.forEach((checkbox) => {
     if (checkbox.checked) {
