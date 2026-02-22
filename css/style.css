@@ -79,7 +79,7 @@ main {
   display: inline-block;
 }
 .password-display__text::before {
-  content: "​";
+  content: ​;
 }
 @media (min-width: 48em) {
   .password-display__text {
