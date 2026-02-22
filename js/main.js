@@ -5,9 +5,9 @@ const copyBtn = document.querySelector(".password-display__icon");
 slider.addEventListener("input", (e) => {
   lengthDisplay.textContent = e.target.value;
 
-  const min = slider.min;
-  const max = slider.max;
-  const val = slider.value;
+  const min = +slider.min;
+  const max = +slider.max;
+  const val = +slider.value;
 
   const percentage = ((val - min) / (max - min)) * 100;
   slider.style.background = `linear-gradient(to right, #A4FFAF ${percentage}%, #18171F ${percentage}%)`;
