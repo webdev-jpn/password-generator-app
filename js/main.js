@@ -37,8 +37,15 @@ generateBtn.addEventListener("click", () => {
     }
   });
 
-  if (availableChars === "" || length === 0) {
+  if (checkedCount === 0) {
     passwordDisplay.textContent = "Select Options";
+    passwordDisplay.style.color = "#F64A4A";
+    return;
+  }
+
+  if (length === 0) {
+    passwordDisplay.textContent = "Adjust Length";
+    passwordDisplay.style.color = "#F64A4A";
     return;
   }
 
